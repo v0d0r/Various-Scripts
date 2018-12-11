@@ -10,6 +10,15 @@
 clustername="transact-poc-eks"
 
 # install kubectl from amazon
+echo ""
+echo "This script will download and install kubectl for aws, aws-authenticator and aws-cli."
+echo "This is all the tools required to interface with AWS via kubectl and setup configure"
+echo "an existing cluster"
+echo "NOTE: Have not tested this with existing kubectl to be save backup your home"
+echo ".kube folder before running this script"
+echo ""
+read -p "Press [Enter] to continue"
+echo ""
 echo "----------------------------------------------------------------"
 echo "downloading and installing kubectl from aws"
 echo "----------------------------------------------------------------"
@@ -59,6 +68,9 @@ echo "--------------------------------------------------------------------------
 echo "next manual steps are to configure aws-cli and kubectl to work together"
 echo "NOTE YOU WILL NEED YOUR IAM USER KEY AND SECRET FROM THE IAM CONSOLE"
 echo "IF YOU DO NOT HAVE THIS NOW IS A GOOD TIME TO CREATE IAM USERS FIRST"
+echo "Use AWS Access Key ID & AWS Secret Access Key provided via email"
+echo "Default region for POC use us-east-2"
+echo "Default output format json"
 echo "--------------------------------------------------------------------------"
 echo ""
 aws configure
